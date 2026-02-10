@@ -1,0 +1,8 @@
+build:
+    swift run
+
+clean:
+    rm -rf Output .build
+
+serve:
+    swift run && cd Output && python3 -m http.server 8000

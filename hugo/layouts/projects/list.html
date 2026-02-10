@@ -1,0 +1,17 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{ .Content }}
+
+{{ range sort (sort .Pages "Title") "Params.order" }}
+<article>
+    <h2>{{ .Title }}</h2>
+    {{ .Content }}
+    <dl>
+        <dt>Category</dt>
+        <dd>{{ .Params.category }}</dd>
+        <dt>Repository</dt>
+        <dd><a href="{{ .Params.repo }}">{{ .Params.repo }}</a></dd>
+    </dl>
+</article>
+{{ end }}
+{{ end }}

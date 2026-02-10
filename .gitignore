@@ -1,0 +1,16 @@
+# Build output
+hugo/public/
+saga-ssg/deploy/
+publish-ssg/Output/
+
+# Swift
+.build/
+.swiftpm/
+.publish/
+Package.resolved
+
+# macOS
+.DS_Store
+
+# Other
+.claude/

@@ -1,0 +1,31 @@
+baseURL = "https://example.com/"
+languageCode = "en-us"
+title = "RealWorld SSG"
+disableKinds = ["taxonomy", "sitemap"]
+
+[pagination]
+  pagerSize = 2
+  path = "page"
+
+[permalinks]
+  [permalinks.page]
+    articles = "/articles/:year/:contentbasename/"
+  [permalinks.term]
+    tags = "/articles/tags/:slug/"
+
+[outputFormats.RSS]
+  baseName = "feed"
+
+[outputs]
+  home = ["HTML"]
+  section = ["HTML", "RSS"]
+
+[services.rss]
+  limit = 20
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[markup.highlight]
+  codeFences = true
+  noClasses = false
