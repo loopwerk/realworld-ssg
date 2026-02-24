@@ -12,5 +12,6 @@ try RealWorldSite().publish(using: [
     including: [.articles],
     config: .init(targetPath: "articles/feed.xml")
   ),
+  .generateContactPage(factory: factory),
   .removeProjectPages(),
 ])

@@ -34,7 +34,7 @@ struct Run {
           .itemWriter(swim(renderPage)),
         ]
       )
+      .createPage("contact/index.html", using: swim(renderContactPage))
       .run()
-      .staticFiles()
   }
 }

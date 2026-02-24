@@ -34,6 +34,7 @@ func baseLayout(title pageTitle: String, @NodeBuilder children: () -> NodeConver
             a(href: "/articles/") { "Articles" }
             a(href: "/projects/") { "Projects" }
             a(href: "/about/") { "About" }
+            a(href: "/contact/") { "Contact" }
           }
         }
 
@@ -181,5 +182,16 @@ func renderProjects(context: ItemsRenderingContext<ProjectMetadata>) -> Node {
           }
         }
       }
+  }
+}
+
+// MARK: - Contact page
+
+func renderContactPage(context: PageRenderingContext) -> Node {
+  return baseLayout(title: "Contact") {
+    h1 { "Contact" }
+    form {
+      textarea()
+    }
   }
 }

@@ -31,7 +31,8 @@ func baseLayout(title: String, _ content: Node<HTML.BodyContext>) -> HTML {
           .a(.href("/"), .text("Home")),
           .a(.href("/articles/"), .text("Articles")),
           .a(.href("/projects/"), .text("Projects")),
-          .a(.href("/about/"), .text("About"))
+          .a(.href("/about/"), .text("About")),
+          .a(.href("/contact/"), .text("Contact"))
         )
       ),
       .main(content),
@@ -161,6 +162,17 @@ struct RealWorldHTMLFactory: HTMLFactory {
           .href(Path("/articles/page/\(page + 1)/")),
           .text("Next")
         ))
+      )
+    ))
+  }
+
+  // MARK: - Contact page
+
+  func makeContactHTML() -> HTML {
+    baseLayout(title: "Contact", .group(
+      .h1(.text("Contact")),
+      .form(
+        .textarea()
       )
     ))
   }

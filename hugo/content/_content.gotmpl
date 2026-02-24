@@ -1,0 +1,9 @@
+{{ $content := dict "mediaType" "text/html" "value" "" }}
+{{ $page := dict
+  "content" $content
+  "kind" "page"
+  "path" "contact"
+  "title" "Contact"
+  "type" "contact"
+}}
+{{ .AddPage $page }}

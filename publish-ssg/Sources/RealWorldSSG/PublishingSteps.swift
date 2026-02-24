@@ -17,6 +17,15 @@ extension PublishingStep where Site == RealWorldSite {
     }
   }
 
+  /// Generate the contact page programmatically (no markdown content)
+  static func generateContactPage(factory: RealWorldHTMLFactory) -> Self {
+    .step(named: "Generate contact page") { context in
+      let html = factory.makeContactHTML()
+      let path = Path("contact/index.html")
+      try context.createOutputFile(at: path).write(html.render())
+    }
+  }
+
   /// Remove individual project pages (we only want the listing)
   static func removeProjectPages() -> Self {
     .step(named: "Remove project pages") { context in
