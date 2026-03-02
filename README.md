@@ -21,8 +21,10 @@ A minimal but realistic static site with:
 - A **projects** page listing open source projects
 - An **about** page
 - Article URLs include the publication year: `/articles/2024/my-post/`
+- A **contact** page, fully programmatically created (not from a markdown file).
+- Cache-busting CSS filename.
 
-No CSS. No themes. Just semantic HTML — the focus is on the SSG mechanics.
+No fancy CSS. No themes. Just semantic HTML — the focus is on the SSG mechanics.
 
 ## Requirements
 

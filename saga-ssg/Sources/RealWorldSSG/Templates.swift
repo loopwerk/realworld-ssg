@@ -24,7 +24,7 @@ func baseLayout(title pageTitle: String, @NodeBuilder children: () -> NodeConver
         meta(charset: "UTF-8")
         meta(content: "width=device-width, initial-scale=1", name: "viewport")
         title { pageTitle }
-        link(href: "/static/style.css", rel: "stylesheet")
+        link(href: hashed("/static/style.css"), rel: "stylesheet")
         link(href: "/articles/feed.xml", rel: "alternate", title: "RealWorld SSG", type: "application/rss+xml")
       }
       body {
